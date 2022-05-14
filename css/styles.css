@@ -36,6 +36,9 @@
 
     /* solid */
     --header-solid: #ececec;
+
+    /* socials icon */
+    --socials-icon: #AFB1B8;
 }
 
 /* body */
@@ -118,7 +121,7 @@ img {
 
 .header-list .link,
 .header-address .link {
-    display: block;
+    display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -156,23 +159,32 @@ img {
     color: var(--text-color);
 }
 
+.mail, .tel {
+    justify-content: center;
+    align-items: center;
+}
+
+.envelope-smartphone {
+    margin-right: 10px;
+}
+
 .page-header .link:hover,
 .page-header .link:focus,
-.footer .link:hover,
-.footer .link:focus {
+.footer .f-link:hover,
+.footer .f-link:focus {
     color: var(--color-logo-blue);
+    fill: currentColor;
 }
 
 /* hero */
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    text-align: center; 
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bgi\ .jpg);
+    background-size: 1600px;
 }
 
-.hero {
-    background-color: var(--hero-bgc);
-    text-align: center;
-}
 
 .hero-title {
     margin-bottom: 13px;
@@ -190,6 +202,7 @@ img {
     width: 200px;
     height: 50px;
 
+    border: none;
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
@@ -229,6 +242,17 @@ img {
 
 .advantages .item:last-child {
     margin-right: 0;
+}
+
+.advantages-tumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+    background-color: var(--second-bgc);
 }
 
 .advantages .title {
@@ -272,6 +296,8 @@ img {
 .our-team {
     padding-top: 94px;
     padding-bottom: 94px;
+    background-color: var(--second-bgc);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .our-team-list {
@@ -281,19 +307,47 @@ img {
 
 .our-team-list .item {
     margin-right: 30px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .our-team-list .item:last-child {
     margin-right: 0;
 }
 
-.our-team {
-    background-color: var(--second-bgc);
-}
-
 .item > .team-box {
     padding-top: 30px;
     padding-bottom: 30px;
+
+    background-color: var(--main-bgc);
+}
+
+.icon-list {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.item-icon:not(:last-child) {
+    margin-right: 10px;
+}
+
+.icon-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--socials-icon);
+    background-color: var(--main-bgc);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.icon-link:hover, .icon-link:focus {
+    background-color: var(--color-logo-blue);
+    color: var(--color-logo-white);
 }
 
 .our-team-title {
@@ -306,9 +360,56 @@ img {
     color: var(--title-text-color);
 }
 
+.social-icon {
+    fill: currentColor;
+}
+
 .position {
+    margin-bottom: 16px;
     text-align: center;
     line-height: 1.19;
+}
+
+/* regular customers */
+
+.regular-customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.regular-customers .section-title {
+    margin-bottom: 50px;
+}
+
+.r-c-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r-c-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--socials-icon);
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--socials-icon);
+    border-radius: 4px;
+}
+
+.r-c-list .r-c-icon:hover {
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+}
+
+.customer-icon {
+    fill: currentColor;
+}
+
+.r-c-list .item:not(:last-child) {
+    margin-right: 30px;
 }
 
 /* footer */
@@ -320,6 +421,10 @@ img {
 
 .footer {
     background-color: var(--footer-bgc);
+}
+
+.footer-menu {
+    display: flex;
 }
 
 .logo-white {
@@ -341,6 +446,49 @@ img {
 .footer .link {
     color: rgba(255, 255, 255, 0.6);
 }
+
+.join {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+}
+
+.join .title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    color: var(--txt-light-cl);
+}
+
+.join .list {
+    display: flex; 
+}
+
+.f-c-icon .footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--txt-light-cl);
+}
+
+.f-c-icon .footer-icon:hover {
+    background-color: var(--button-color);
+}
+
+.f-icon {
+    fill: currentColor;
+}
+
+.f-c-icon:not(:last-child) {
+    margin-right: 10px;
+}
+
 /* portfolio.html */
 
 .our-work-section {
@@ -369,6 +517,10 @@ img {
     background: var(--second-bgc);
 }
 
+.btn:hover, .btn:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .btn-active {
     color: var(--txt-light-cl);
     background: var(--button-color);
@@ -392,16 +544,6 @@ img {
     margin-right: 0;
 }
 /* our-work */
-/* Якщо я робив так, то в мене всеодно видавлювало в футер 30px, хоча в дев тулзах наче все працювало, чому так?
-.our-work {
-    margin-right: -30px;
-    margin-bottom: -30px;
-}
-
-.our-work .item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-} */
 
 .our-work{
     display: flex;
@@ -411,6 +553,10 @@ img {
 .our-work .item {
     margin-right: 30px;
     margin-bottom: 30px;
+}
+
+.our-work .item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .our-work .item:nth-child(3n) {
