@@ -215,7 +215,7 @@ img {
 }
 
 .button:hover,
-.button:focus, {
+.button:focus {
     background: var(--button-hover);
 }
 
