@@ -215,9 +215,7 @@ img {
 }
 
 .button:hover,
-.button:focus,
-.btn:hover,
-.btn:focus {
+.button:focus, {
     background: var(--button-hover);
 }
 
@@ -297,7 +295,7 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
     background-color: var(--second-bgc);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .our-team-list {
@@ -399,7 +397,8 @@ img {
     border-radius: 4px;
 }
 
-.r-c-list .r-c-icon:hover {
+.r-c-list .r-c-icon:hover,
+.r-c-list .r-c-icon:focus {
     color: var(--button-color);
     border: 1px solid var(--button-color);
 }
@@ -477,7 +476,8 @@ img {
     color: var(--txt-light-cl);
 }
 
-.f-c-icon .footer-icon:hover {
+.f-c-icon .footer-icon:hover,
+.f-c-icon .footer-icon:focus {
     background-color: var(--button-color);
 }
 
@@ -518,6 +518,8 @@ img {
 }
 
 .btn:hover, .btn:focus {
+    color: var(--txt-light-cl);
+    background: var(--button-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
